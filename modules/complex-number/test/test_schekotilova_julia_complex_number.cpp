@@ -2,9 +2,8 @@
 // Copyright 2021 Schekotilova Julia
 
 #include <gtest/gtest.h>
-
 #include "include/complex_number.h"
-
+#include <cmath>
 
 
 TEST(Schekotilova_Julia_ComplexNumberTest, Can_be_double) {
