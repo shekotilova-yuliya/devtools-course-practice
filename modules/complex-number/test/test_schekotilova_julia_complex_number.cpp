@@ -41,5 +41,5 @@ TEST(Schekotilova_Julia_ComplexNumberTest, Comparison) {
   // Act
   ComplexNumber z1(re, im);
   // Assert
-  ASSERT_GT(std::sqrt(z1.getRe() * z1.getRe() + z1.getIm() * z1.getIm()), 0);
+  ASSERT_GT(sqrt(z1.getRe() * z1.getRe() + z1.getIm() * z1.getIm()), 0.0);
 }
