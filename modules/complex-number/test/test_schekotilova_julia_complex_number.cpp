@@ -7,25 +7,25 @@
 
 
 
-TEST(Schekotilova_Julia_ComplexNumberTest, Can_Be_Float) {
+TEST(Schekotilova_Julia_ComplexNumberTest, Can_be_double) {
 	// Arrange
-	float re = 120.23;
-	float im = 1.11;
+	double re = 120.23;
+	double im = 1.11;
 
 	// Act
 	ComplexNumber z(re, im);
 	// Assert
-	ASSERT_FLOAT_EQ(z.getIm(), im);
-	ASSERT_FLOAT_EQ(z.getRe(), re);
+	ASSERT_EQ(z.getIm(), im);
+	ASSERT_EQ(z.getRe(), re);
 }
 
 TEST(Schekotilova_Julia_ComplexNumberTest, Division) {
 	// Arrange
-	float re = 10;
-	float im = 10;
-	float re1 = 5;
-	float im1 = 5;
-	float res = 2;
+	double re = 10;
+	double im = 10;
+	double re1 = 5;
+	double im1 = 5;
+	double res = 2;
 	// Act
 	ComplexNumber z(re, im);
 	ComplexNumber z1(re1, im1);
