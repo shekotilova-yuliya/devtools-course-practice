@@ -15,35 +15,31 @@ TEST(Schekotilova_Julia_ComplexNumberTest, Can_be_double) {
   // Act
   ComplexNumber z(re, im);
   // Assert
-  ASSERT_EQ(z.getIm(), im);
-  ASSERT_EQ(z.getRe(), re);
+  ASSERT_EQ(im, z.getIm());
+  ASSERT_EQ(re, z.getRe());
 }
 
 TEST(Schekotilova_Julia_ComplexNumberTest, Division) {
   // Arrange
-  double re = 10;
-  double im = 10;
-  double re1 = 5;
-  double im1 = 5;
-  double res = 2;
+  double re = 10.0;
+  double im = 10.0;
+  double re1 = 5.0;
+  double im1 = 5.0;
+  double res = 2.0;
   // Act
   ComplexNumber z(re, im);
   ComplexNumber z1(re1, im1);
   // Assert
-  EXPECT_EQ(res, z.getRe() / z1.getIm());
-  EXPECT_EQ(res, z.getIm() / z1.getIm());
+  ASSERT_EQ(res, z.getRe() / z1.getIm());
+  ASSERT_EQ(res, z.getIm() / z1.getIm());
 }
 
 TEST(Schekotilova_Julia_ComplexNumberTest, Comparison) {
   // Arrange
   double re = 12.4;
   double im = 12.4;
-  double re1 = 8;
-  double im1 = 8;
   // Act
   ComplexNumber z1(re, im);
-  ComplexNumber z2(0, 0);
   // Assert
-  ASSERT_GT(z1.getRe(), z2.getRe());
-  ASSERT_GT(z1.getIm(), z2.getIm());
+  ASSERT_GT(std::sqrt(z1.getRe() * z1.getRe() + z1.getIm() * z1.getIm()), 0);
 }
