@@ -2,7 +2,9 @@
 // Copyright 2021 Schekotilova Julia
 
 #include <gtest/gtest.h>
+
 #include <cmath>
+
 #include "include/complex_number.h"
 
 
@@ -41,5 +43,5 @@ TEST(Schekotilova_Julia_ComplexNumberTest, Comparison) {
   // Act
   ComplexNumber z1(re, im);
   // Assert
-  ASSERT_GT(sqrt(z1.getRe() * z1.getRe() + z1.getIm() * z1.getIm()), 0.0);
+  ASSERT_LT(0.0, sqrt(z1.getRe() * z1.getRe() + z1.getIm() * z1.getIm()));
 }
