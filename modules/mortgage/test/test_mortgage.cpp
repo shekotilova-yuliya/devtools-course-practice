@@ -13,7 +13,7 @@ TEST(mortagage_calculator, can_set_cost) {
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setCost(res);
 
-  ASSERT_EQ(res, mortgg.getCost());
+  EXPECT_EQ(res, mortgg.getCost());
 }
 
 TEST(mortagage_calculator, can_set_downPayment) {
@@ -83,7 +83,7 @@ TEST(mortagage_calculator, can_get_monthlyPayment) {
 
 TEST(mortagage_calculator, can_get_monthlyRate) {
   double res = 0.0125;
-	
+
   int cost = 2000000;
   int downPayment = 0;
   int creditTerm = 10;
