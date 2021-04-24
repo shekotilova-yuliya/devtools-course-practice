@@ -41,15 +41,12 @@ void mortgage::setCost(const int& cost) {
 void mortgage::setDownPayment(const int& downPayment) {
   this->downPayment = downPayment;
 }
-
 void mortgage::setCreditTerm(const int& creditTerm) {
   this->creditTerm = creditTerm;
 }
-
 void mortgage::setInterestRate(const double& interestRate) {
   this->interestRate = interestRate;
 }
-
 void mortgage::calc() {
   double tmp;
   cost -= downPayment;
