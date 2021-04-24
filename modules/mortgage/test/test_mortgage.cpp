@@ -9,7 +9,7 @@ TEST(mortagage_calculator, can_set_cost) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setCost(res);
 
@@ -22,7 +22,7 @@ TEST(mortagage_calculator, can_set_downPayment) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setDownPayment(res);
 
@@ -35,7 +35,7 @@ TEST(mortagage_calculator, can_set_creditTerm) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setCreditTerm(res);
 
@@ -48,7 +48,7 @@ TEST(mortagage_calculator, can_set_interestRate) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setInterestRate(res);
 
@@ -61,7 +61,7 @@ TEST(mortagage_calculator, can_get_totalFee) {
   int downPayment = 0;
   int creditTerm = 10;
   double interestRate = 15;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.calc();
 
@@ -74,7 +74,7 @@ TEST(mortagage_calculator, can_get_monthlyPayment) {
   int downPayment = 0;
   int creditTerm = 10;
   double interestRate = 15;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.calc();
 
@@ -87,7 +87,7 @@ TEST(mortagage_calculator, can_get_monthlyRate) {
   int downPayment = 0;
   int creditTerm = 10;
   double interestRate = 15;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.calc();
 
@@ -99,7 +99,7 @@ TEST(mortagage_calculator, can_create_copy) {
   int downPayment = 1;
   int creditTerm = 1;
   double interestRate = 1;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgage mortgg_(mortgg);
 
@@ -114,7 +114,7 @@ TEST(mortagage_calculator, copy_working_fine) {
   int downPayment = 1;
   int creditTerm = 1;
   double interestRate = 1;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgage mortgg_(mortgg);
 
@@ -129,7 +129,7 @@ TEST(mortagage_calculator, can_calculate_with_zero_numbers) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-	
+
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
 
   ASSERT_NO_THROW(mortgg.getTotalFee());
