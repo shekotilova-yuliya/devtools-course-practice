@@ -52,7 +52,7 @@ TEST(mortagage_calculator, can_set_interestRate) {
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setInterestRate(res);
 
-  ASSERT_EQ(res, mortgg.getInterestRate());
+  ASSERT_EQ(mortgg.getInterestRate(), res);
 }
 
 TEST(mortagage_calculator, can_get_totalFee) {
@@ -70,27 +70,27 @@ TEST(mortagage_calculator, can_get_totalFee) {
 
 TEST(mortagage_calculator, can_get_monthlyPayment) {
   int res = 32266;
-  
+
   int cost = 2000000;
   int downPayment = 0;
   int creditTerm = 10;
   double interestRate = 15;
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.calc();
-  
+
   ASSERT_EQ(res, mortgg.getMonthlyPayment());
 }
 
 TEST(mortagage_calculator, can_get_monthlyRate) {
-   double res = 0.0125;
-
+  double res = 0.0125;
+	
   int cost = 2000000;
   int downPayment = 0;
   int creditTerm = 10;
   double interestRate = 15;
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.calc();
-  
+
   ASSERT_DOUBLE_EQ(res, mortgg.getMonthlyRate());
 }
 
