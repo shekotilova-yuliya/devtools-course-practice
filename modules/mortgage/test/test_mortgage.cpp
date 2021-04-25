@@ -88,7 +88,7 @@ TEST(mortagage_calculator, can_get_monthlyRate) {
   int creditTerm = 10;
   double interestRate = 15;
   mortgage mortgg(cost, downPayment, creditTerm, interestRate);
-	
+
   mortgg.calc();
 
   ASSERT_DOUBLE_EQ(res, mortgg.getMonthlyRate());
