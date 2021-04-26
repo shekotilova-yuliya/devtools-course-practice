@@ -9,8 +9,8 @@ TEST(mortagage_calculator, can_set_cost) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
 
+  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setCost(res);
 
   ASSERT_EQ(res, mortgg.getCost());
@@ -22,8 +22,8 @@ TEST(mortagage_calculator, can_set_downPayment) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
 
+  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setDownPayment(res);
 
   ASSERT_EQ(res, mortgg.getDownPayment());
@@ -35,8 +35,8 @@ TEST(mortagage_calculator, can_set_creditTerm) {
   int downPayment = 0;
   int creditTerm = 0;
   double interestRate = 0;
-  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
 
+  mortgage mortgg(cost, downPayment, creditTerm, interestRate);
   mortgg.setCreditTerm(res);
 
   ASSERT_EQ(res, mortgg.getCreditTerm());
